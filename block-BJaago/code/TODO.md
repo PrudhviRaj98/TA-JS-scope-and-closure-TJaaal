@@ -26,8 +26,8 @@ var userMessage = sayHelloToUser('Bran');
 
 <!-- Put your image below -->
 
-![](./1.jpeg)
-(./2.jpeg)
+![](../img/1.jpeg)
+(../img/2.jpeg)
 
 2.
 
