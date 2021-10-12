@@ -78,7 +78,8 @@ console.log(one, two, three, four); // 5
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](../img/1.jpeg)
+![](../img/2.jpeg)
 
 - Create the execution context diagram
 - What will be the value of 1, 2, 3, 4 and 5 or error if the code does not work
