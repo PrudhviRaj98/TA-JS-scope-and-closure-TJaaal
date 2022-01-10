@@ -2,7 +2,7 @@ To create the execution context diagram consider the following:
 
 - Global and Function Execution Context
 - Different Phases Of Execution Context
-- Var let and const
+- Var let and const and 
 
 Create the execution context diagram of the following code line by line.
 
