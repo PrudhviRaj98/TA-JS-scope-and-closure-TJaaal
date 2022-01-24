@@ -1,4 +1,10 @@
 1. Create a function by your choice that accepts a callback function.
+```js
+
+function add(n,cb){
+
+}
+```
 
 2. Create a function by you choice that returns a function reference.
 
@@ -10,7 +16,11 @@ Have `map` return a new array filled with values that are the result of the 'cal
 
 ```js
 // Your code goes here
-
+array = [1,2,3,4,5,6,7,8]
+function map (arr,cb){
+  return 
+}
+stored array = array.map(map)
 // Test Your Code
 function multiplyByTwo(n) {
   return n * 2;
