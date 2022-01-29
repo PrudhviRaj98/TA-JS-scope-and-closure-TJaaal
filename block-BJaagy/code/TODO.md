@@ -1,9 +1,14 @@
 1. Create a function by your choice that accepts a callback function.
 ```js
 
-function add(n,cb){
-
+function outer (cb){
+  return cb(21)
 }
+
+outer(function inner (num){
+  num* 2
+});
+
 ```
 
 2. Create a function by you choice that returns a function reference.
