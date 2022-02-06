@@ -4,10 +4,11 @@
 
 ```js
 // Your code goes here
-function outer(string){
+function outer(str){
   let sayHello = function(){
-    alert(string);
+    alert(str);
   }
+  sayHello();
 }
 ```
 
@@ -15,9 +16,12 @@ function outer(string){
 
 ```js
 // Your code goes here
-function delay(cb,time){
-
+function delay(cb,ms){
+  return function(){
+    setTimeout(cb,ms);
+  }
 }
+let time =  delay(()=>console.log("hello"),2000)
 ```
 
 3. Write a function with a closure. The first function should only take one argument, someone's last name, and return the inner function. The returned `inner` function should take one more argument, someone's first name. When inner function when called it should console.log both the first name and the last name with a space.
@@ -46,8 +50,12 @@ lastNameLee('Lynne'); //logs 'Lynne Lee'
 ```js
 function storyWriter(obj) {
   return {
-    addWords : obj,
-    erase :  "" 
+    addWords : function(){
+      return  
+    },
+    erase : function(){
+
+    }
   }
 }
 
@@ -71,10 +79,7 @@ When `forEach` function is called it returns another function. When the returned
 function forEach(arr) {
   let index = 0
   return function (){
-    for (let index = 0 , index <=arr.length, index++ ){
-      
-      return arr[i]
-    }
+    return arr[index++]
   }
 }
 
@@ -114,9 +119,15 @@ manager('Head'); // Head Manager
 ```js
 function changeSalary(sal) {
   return {
-    let raise : sal + 500,
-    let lower : sal - 500,
-    let current : sal
+    let raise : function (){
+      return sal + 500;
+    },
+    let lower : function (){
+      return sal - 500;
+    },
+    let current : function (){
+      return sal;
+    }
   }
 }
 
@@ -136,9 +147,17 @@ arya.lower(); // 3500
 ```js
 function nameFactory (firstName,lastName){
   return {
-    getFullName : firstName + lastName,
-    setFirstName : firstName
-    setLastName
+    getFullName : function (){
+      return `${firstName} ${lastName}`;
+    },
+    setFirstName : function (fn){
+      firstName = fn;
+      return `${firstName} ${lastName}`;
+    },
+    setLastName : function (gn){
+      lastName = gn;
+      return `${firstName} ${lastName}`;
+    }
   }
 }
 
@@ -153,8 +172,12 @@ arya.setLastName('Lannister'); // "Jon Lannister"
 The returned function accepts a string (children) and returns the children with the tag you passed.
 
 ```js
-function createTag() {
-  // your code goes here
+function createTag(str) {
+  return function(str){
+    let elm = document.createElement(tag);
+    elm.innerText = str;
+    return elm;
+  }
 }
 
 let bold = createTag('b');
