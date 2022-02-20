@@ -5,9 +5,9 @@ Watch this video before doing the exercise: https://www.youtube.com/watch?v=XgSj
 1. Guess the output:
 
 ```js
-let firstName = 'Arya';
-const lastName = 'Stark';
-var knownAs = 'no one';
+let firstName = 'Arya'; // undefined
+const lastName = 'Stark'; // undefined
+var knownAs = 'no one'; // no one
 
 console.log(
   window.firstName,
@@ -27,7 +27,7 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName));
+console.log(window.fullName(firstName, lastName)); // AryaStark
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
