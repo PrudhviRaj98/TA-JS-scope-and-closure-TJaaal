@@ -5,8 +5,15 @@
 ```js
 // Your code goes here
 
+function multiplyBy(num){
+  return function words(numb){
+    return num * numb
+  }
+  words();
+}
+
 const double = multiplyBy(2);
-const final = double(15); // final should be 30
+const final = double(15); // final should be 300
 ```
 
 2. Write a function called `fullName` that takes a string `firstName` as an argument and returns a function. Returned function takes another string `lastName` as an argument and returns full name.
