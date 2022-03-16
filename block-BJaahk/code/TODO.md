@@ -89,7 +89,8 @@ addCache('foo'); // {12: 22, 100: 110, 1: 11}
 
 ```js
 function createCache() {
-  // Your code goes here
+  
+  return
 }
 
 function add10(num) {
